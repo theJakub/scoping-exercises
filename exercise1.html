@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/*
+			Exercise 1
+			The following code should log to console "Homer", "Barney", "Marge"
+			How should we fix this?
+		*/
+		var WIDTH = 0;
+		var HEIGHT = 1;
+		var COLOR = 2;
+		var NAME = 3;
+
+		function createCharacter(width, height, color, name) {
+			var widget = [ // I declared this var inside the function by adding var in front of it to make it local and not affect the global var widget on line 31.
+				width,
+				height,
+				color,
+				name
+			];
+			return widget;
+		}
+
+		var widget = createCharacter(10, 12, "yellow", "Homer"); // I put var declarations in front of these three also.
+		var widget2 = createCharacter(12, 18, "blue", "Barney");
+		var widget3 = createCharacter(4, 7, "red", "Marge");
+
+		//Hey! Don't re-order these.
+		console.log(widget[NAME]);
+		console.log(widget2[NAME]);
+		console.log(widget3[NAME]);
+	</script>
+</body>
+
+</html>

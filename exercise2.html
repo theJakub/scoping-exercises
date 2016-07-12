@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/*
+			Exercise 2
+			How many different variables named "a" are created here? 
+		*/
+
+		// there are three variables named "a"
+		function createFunction() {
+			var a = function () { // this is the second variable "a" as a function inside createFunction
+				var a = "b"; // this is the third variable "a" inside the a() function
+				return a;
+			};
+			return a;
+		}
+		var a = createFunction(); // this is the first variable "a" represending the function createFunction. It would be hoisted to the top of the document as undefined.
+		console.log(a());
+	</script>
+</body>
+
+</html>
